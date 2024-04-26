@@ -1,0 +1,132 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flexbox;
+    bottom: auto;
+    font-family: 'Geologica', sans-serif;
+    height: max-content;
+    background: linear-gradient(-45deg, #ee7752, #d95d8c, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 20s ease-in-out infinite;
+    margin-top: 5vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+.card {
+    display: flex;
+    width: calc(33.33% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(39, 36, 36, 0.1);
+}
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+h2 {
+    text-align: center;
+}
+.desc {
+    text-align: center;
+}
+.logo img {
+    width: 50px;
+    border-radius: 50%; 
+    height: auto; 
+} 
+header {
+    text-align: center;
+    font-family: "Righteous", sans-serif;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+    color:#f0f0f0
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .footer p {
+    margin: 0;
+    text-align: center;
+  }
